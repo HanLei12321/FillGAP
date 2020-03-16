@@ -1,0 +1,43 @@
+###########################################################
+#
+#   Program name: FillGAP
+#         Auther: Lei Han
+#        version: v1.0 (First version)      
+#           Date: 2020.3.10
+#
+#
+###########################################################
+1. Function introduction:
+   FillGAP is a process used to improve assembly quality. The background of this program is that the quality of the genome assembled using second-generation sequencing data is very poor (containing many gaps), and there is a version of the genome assembled by previous people in the NCBI database. This process is performed by combining two assembled genomes. For multiple sequence alignment, find the gap-containing regions after alignment, then use the original offline data to perform alignment to obtain the gap depth of the gap region, select the best base in the corresponding position, and finally fill N. This program provides a new idea for improving the genome with poor assembly quality (including many gaps). If the conditions are met, the assembly cost will be greatly reduced, and it may save a version of the assembled genome that will be abandoned. 
+
+2. Input and output:
+   This process adds 3 software paths to the profile's PATH. You can download these three software in advance: lastz, BWA and samtools.
+   The program requires a reference genome, an assembled genome, and second-generation sequencing of raw, offline data (or filtered clean data), which will eventually produce an assembled genome that fills in part of the gap.
+
+3.Statement:
+   This is the first version of the process we released. It has been verified on the worm genome (approximately 270M). The purpose of this process was to fill the gap of the worm genome. We will update other Species version in the future.
+
+4.Usage:
+   The process is divided into 6 steps. You can run it like this:
+Step0:
+   vi profile             ##adding input information to profile.
+
+Step1(Lastz align):
+   bash STEP01_Lastz.sh
+
+Step2(BWA mapping):
+   bash STEP02_BWA.sh
+
+Step3(Generate max coverage base of GAP site):
+   bash STEP03_MAX.sh
+
+Step4(Find all GAP location):
+   bash STEP04_NPP.sh
+
+Step5(Find all GAP location can fill):
+   bash STEP05_N2Fill.sh
+
+Step6(Filling the GAP):
+   bash STEP06_Fill.sh
+
+

@@ -1,0 +1,3 @@
+/hwfssz1/ST_AGRIC/USER/chenhongyun/app/bwa/bwa index /hwfssz1/ST_AGRIC/P18Z10200N0113_ANIMAL/USER/hanlei1/stLFR/04.align/00.aliagn/blasttest/final/mapNncbiseq.fa
+/hwfssz1/ST_AGRIC/USER/chenhongyun/app/bwa/bwa mem -t 8 -k 30 -M -R "@RG\tID:V300028426B_L01\tPL:BGISEQ\tLB:V300028426B_L01\tSM:BS1" /hwfssz1/ST_AGRIC/P18Z10200N0113_ANIMAL/USER/hanlei1/stLFR/04.align/00.aliagn/blasttest/final/mapNncbiseq.fa /hwfssz1/ST_AGRIC/P18Z10200N0113_ANIMAL/USER/hanlei1/02.assembler/sc_test.sh.Qsub/split_reads.1.fq.gz.clean.gz /hwfssz1/ST_AGRIC/P18Z10200N0113_ANIMAL/USER/hanlei1/02.assembler/sc_test.sh.Qsub/split_reads.2.fq.gz.clean.gz;
+/hwfssz1/ST_HEALTH/Population_Genomics/User/luoxin/software/Samtools/samtools-1.6/samtools view -bS -o NCBIsequence.bam

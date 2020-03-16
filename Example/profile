@@ -1,0 +1,15 @@
+#
+#   basic settings below
+#  MODIFY HERE FOR YOU PROJECT !!!
+#
+
+REF_GENOME="./ref/GCA_006503575.1_ASM650357v1_genomic.fna"   ##Your reference genome from database here
+GENOME="./genome/assemble.fasta"            ###Your assembly genome
+R1="./genome/split_reads.1.fq.gz.clean.gz"          ###Your rawdata clean reads 1.fq(.gz)
+R2="./genome/split_reads.2.fq.gz.clean.gz"          ###Your rawdata clean reads 2.fq(.gz)  
+SCRIPT_PATH="./"    # Your work directory path
+Lastz_PATH="/usr/bin/"              #Adding your lastz software PATH here
+BWA_PATH="/usr/bin/"                #Adding your BWA software PATH here
+Samtools_PATH="/usr/bin/"           #Adding your Samtools software PATH here
+
+ 
